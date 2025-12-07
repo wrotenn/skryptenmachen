@@ -1,0 +1,15 @@
+#!/bin/bash
+while true; do
+echo "Data i godzina:"
+date
+echo "Ilosc zalogowanych userów:"
+who | wc -l
+sleep 10
+if [ -f STOP ]
+  then
+    echo "WYKRYTO PLIK STOP!!!! AUTODESTRUKCJA NASTAPI TERAZ!!! APOKALPISA!"
+    rm STOP	
+    exit 0
+fi
+
+done

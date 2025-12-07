@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Podaj pierwszy plik:"
+read plik1
+echo "Podaj drugi plik:"
+read plik2
+cp $plik1 kopia1
+rm $plik1
+mv $plik2 $plik1
+mv kopia1 $plik2

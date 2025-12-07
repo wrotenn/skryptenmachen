@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Podaj słowo do wyszukania:"
+read slowo
+
+grep $slowo *.txt | wc -l

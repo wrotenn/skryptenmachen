@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Proszę o wprowadzenie imienia"
+read name
+echo "Witaj" $name

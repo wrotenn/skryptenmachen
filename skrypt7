@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Wypisanie argumentów @: $@"
+
+echo "Ilość argumentów #: $#"
+
+echo "Wypisanie argumentów #"
+for (( i=1; i<=$#; i++));
+  do
+    var="$i"
+    echo "${!var}"
+done

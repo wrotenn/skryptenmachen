@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Podaj nazwe uzytkownika:"
+read username
+echo "Podaj nazwe grupy:"
+read group
+
+touch placeholder.txt
+id -n -G $username > placeholder.txt
+zmienna_wynik=$(grep $group placeholder.txt | wc -l)
+rm placeholder.txt
+if [[ $zmienna_wynik != 0 ]];
+then
+  echo "Należy go grupy"
+  exit 0
+else
+  echo "Nie należy do grupy"
+  exit 1
+fi
+
