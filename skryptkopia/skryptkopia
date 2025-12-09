@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ -f lock ]
+  then 
+    exit 0
+else 
+  touch lock
+fi
+
+miesiac=$(date +%m)
+
+case $miesiac in
+	"01") miesiacc="styczeń" ;;
+	"02") miesiacc="luty" ;;
+	"12") miesiacc="grudzień" ;;
+esac
+mkdir "$miesiacc"
+
+
+
+rm lock
